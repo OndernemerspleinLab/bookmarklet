@@ -48,7 +48,7 @@
 			text-decoration: none;
 			display: inline-flex;
 			align-items: center;
-			transition-property: background-color, border-color;
+			transition-property: background-color, border-color, color, fill;
 			transition-duration: 200ms;
 			border: 2px solid hsl(220, 40%, 50%);
 		}
@@ -58,8 +58,10 @@
 		}
 
 		.bookmarklet:focus {
-			background-color: hsl(40, 40%, 50%);
+			background-color: hsl(40, 60%, 60%);
 			border-color: hsl(40, 40%, 40%);
+			color: hsl(40, 40%, 25%);
+			fill: hsl(40, 40%, 25%);
 			outline: none;
 		}
 
@@ -100,6 +102,7 @@
 			background-color: hsla(40, 40%, 70%, 0);
 			transition-property: color, background-color, border-color;
 			transition-duration: 200ms;
+			border-radius: 3px;
 		}
 
 		.underliner {
@@ -107,12 +110,12 @@
 		}
 
 		.help-link:hover {
-			background-color: hsl(40, 50%, 70%);
+			background-color: hsl(40, 60%, 70%);
 			color: hsl(40, 40%, 25%);
 		}
 
 		.help-link:focus {
-			background-color: hsl(40, 50%, 60%);
+			background-color: hsl(40, 60%, 60%);
 			color: hsl(40, 40%, 25%);
 			outline: none;
 		}
