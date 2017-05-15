@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Bookmarklet TCM-ID Ondernemersplein</title>
 	<style>
-		* {
-			box-sizing: border-box;
-		}
 		html {
 			font-family: georgia serif;
 			font-size: 20px;
 			line-height: 1.6;
-			color: #333;
+			color: hsl(40, 40%, 25%);
 		}
+
+		::selection {
+			background: hsl(40, 60%, 60%);
+		}
+
+		body {
+			display: flex;
+			min-height: 100vh;
+			align-items: center;
+			margin: 0 5%;
+		}
+
 		article {
-			margin: 2em auto;
-			padding: 0 2em;
-			max-width: 39em;
+			margin: 2em auto 14vh auto;
+			max-width: 35em;
+			border-top: double 3px;
+			border-bottom: double 3px;
+			border-color: hsl(40, 20%, 65%);
+			padding: 0.5em 0 0.8em 0;
 		}
 
 		h1 {
@@ -30,7 +42,7 @@
 		}
 
 		p {
-			margin: 0 0 1em 0;
+			margin: 0;
 		}
 
 		.line {
@@ -39,29 +51,30 @@
 
 		.bookmarklet {
 			white-space: nowrap;
-			margin: 1em auto 0 auto;
+			margin: 1em 0;
 			padding: 0.2em 0.8em 0.2em 0.6em;
 			border-radius: 4px;
-			background-color: hsl(220, 40%, 50%);
-			color: #fff;
-			fill: #fff;
 			text-decoration: none;
 			display: inline-flex;
 			align-items: center;
 			transition-property: background-color, border-color, color, fill;
 			transition-duration: 200ms;
-			border: 2px solid hsl(220, 40%, 50%);
+			border: 2px solid;
+			background-color: hsl(40, 60%, 60%);
+			border-color: hsl(40, 60%, 60%);
+			color: hsl(40, 40%, 25%);
+			fill: hsl(40, 40%, 25%);
 		}
 
 		.bookmarklet:hover {
-			background-color: hsl(220, 50%, 55%);
-		}
-
-		.bookmarklet:focus {
 			background-color: hsl(40, 60%, 60%);
 			border-color: hsl(40, 40%, 40%);
-			color: hsl(40, 40%, 25%);
-			fill: hsl(40, 40%, 25%);
+		}
+
+		.bookmarklet:focus,
+		.bookmarklet:active {
+			background-color: hsl(40, 75%, 60%);
+			border-color: hsl(40, 50%, 40%);
 			outline: none;
 		}
 
